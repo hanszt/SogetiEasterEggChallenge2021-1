@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="nl.sogeti.controller.sub_pane.StatisticsController">
+    <Label text="Global statistics:">
+        <font>
+            <Font name="System Bold" size="12.0"/>
+        </font>
+    </Label>
+    <HBox>
+        <VBox prefWidth="100.0">
+            <Label text="Framerate:"/>
+            <Label text="Runtime:"/>
+            <Label text="Increment:"/>
+            <Label/>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0">
+            <Label fx:id="frameRateStatsLabel" text="NaN"/>
+            <Label fx:id="runTimeLabel" text="NaN"/>
+            <Label fx:id="animationIncrementLabel" text="NaN"/>
+            <Label/>
+        </VBox>
+    </HBox>
+    <Label text="Easter egg statistics:">
+        <font>
+            <Font name="System Bold" size="12.0"/>
+        </font>
+    </Label>
+    <HBox>
+        <VBox prefWidth="100.0">
+            <Label text="Group size: "/>
+            <Label text="Highlighting: "/>
+            <Label text="Turn fraction: "/>
+            <Label text="Distribution: "/>
+
+            <Label text="Position x:"/>
+            <Label text="Position y:"/>
+            <Label text="Position z:"/>
+
+            <Label text="Rotation x:"/>
+            <Label text="Rotation y:"/>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0">
+            <Label fx:id="groupSizeLabel"/>
+            <Label fx:id="highlightingLabel"/>
+            <Label fx:id="turnFractionLabel"/>
+            <Label fx:id="distributionLabel"/>
+
+            <Label fx:id="positionXLabel"/>
+            <Label fx:id="positionYLabel"/>
+            <Label fx:id="positionZLabel"/>
+
+            <Label fx:id="rotationXLabel"/>
+            <Label fx:id="rotationYLabel"/>
+        </VBox>
+    </HBox>
+    <Label text="Camera Statistics:">
+        <font>
+            <Font name="System Bold" size="12.0"/>
+        </font>
+    </Label>
+    <HBox>
+        <VBox minWidth="100.0" prefWidth="100.0">
+            <Label text="Position x:"/>
+            <Label text="Position y:"/>
+            <Label text="Position z:"/>
+
+            <Label text="Velocity:"/>
+            <Label text="Field of view: "/>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0" prefWidth="188.0">
+            <Label fx:id="positionCameraXLabel"/>
+            <Label fx:id="positionCameraYLabel"/>
+            <Label fx:id="positionCameraZLabel"/>
+
+            <Label fx:id="velocityCameraLabel"/>
+            <Label fx:id="fieldOfViewCameraLabel"/>
+        </VBox>
+    </HBox>
+</VBox>
+

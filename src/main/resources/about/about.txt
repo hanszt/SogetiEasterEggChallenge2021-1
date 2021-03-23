@@ -1,0 +1,15 @@
+Sogeti Easter Egg challenge 2021
+
+A program to participate in the Sogeti EasterEgg Challenge. If you try it, maybe you will see the egg (sort off) hatch ;)
+
+Use the mouse to move and rotate the egg (right mouse click for rotation, scroll for moving to front or back)
+
+Use the keys for camera movement
+a -> left
+d -> right
+w -> up
+s -> down
+f -> front
+r -> rear
+
+Made By Hans Zuidervaart.

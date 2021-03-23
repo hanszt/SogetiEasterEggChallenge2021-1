@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox maxWidth="300.0" prefHeight="744.0" prefWidth="536.0" spacing="4.0"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="nl.sogeti.controller.sub_pane.AppearanceController">
+    <padding>
+        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+    </padding>
+    <Label text="Choose theme"/>
+    <ComboBox fx:id="themeCombobox" prefWidth="300.0" promptText="Themes"/>
+    <Label text="Choose background"/>
+    <ComboBox fx:id="backgroundCombobox" onAction="#backgroundComboBoxAction"
+              prefWidth="300.0" promptText="Backgrounds"/>
+
+    <Label text="Choose display settings"/>
+    <HBox prefWidth="1000.0">
+        <VBox prefWidth="150.0" spacing="4.0">
+            <padding>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+            </padding>
+            <ToggleButton fx:id="opacityStageButton" mnemonicParsing="false"
+                          prefWidth="1000.0" text="Transparent"/>
+            <ToggleButton fx:id="pointLightVisibleButton" mnemonicParsing="false"
+                          prefWidth="1000.0" text="Point light visible"/>
+        </VBox>
+        <VBox prefWidth="150.0" spacing="4.0">
+            <padding>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+            </padding>
+            <ToggleButton fx:id="fullScreenButton" mnemonicParsing="false" prefWidth="1000.0"
+                          text="Full screen"/>
+            <ToggleButton fx:id="showCoordinateSystemsButton" mnemonicParsing="false"
+                          prefWidth="1000.0" text="Show axis"/>
+        </VBox>
+    </HBox>
+
+    <Label text="Choose colors"/>
+    <HBox prefWidth="1000.0">
+        <VBox prefWidth="150.0" spacing="4.0">
+            <padding>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+            </padding>
+            <Label text="Background color"/>
+            <ColorPicker fx:id="backgroundColorPicker" prefHeight="30"
+                         prefWidth="1000.0"/>
+            <Label text="Highlighting color"/>
+            <ColorPicker fx:id="highlightingColorPicker" prefHeight="30"
+                         prefWidth="1000.0"/>
+            <Label text="Main light color"/>
+            <ColorPicker fx:id="mainLightColorPicker" prefHeight="30"
+                         prefWidth="1000.0"/>
+        </VBox>
+        <VBox prefWidth="150.0" spacing="4.0">
+            <padding>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+            </padding>
+            <Label text="Default mini egg color"/>
+            <ColorPicker fx:id="seedColorPicker" prefHeight="30"
+                         prefWidth="1000.0"/>
+            <Label text="Egg light color"/>
+            <ColorPicker fx:id="eggLightColorPicker" prefHeight="30"
+                         prefWidth="1000.0"/>
+        </VBox>
+    </HBox>
+</VBox>
+
+

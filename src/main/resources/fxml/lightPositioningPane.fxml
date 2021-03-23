@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<HBox prefWidth="415.0"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="nl.sogeti.controller.sub_pane.LightPositioningController">
+    <VBox>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+        <Label text="Light x-axis rotation slider"/>
+        <Slider fx:id="lightXAxisRotationSlider" prefWidth="3000.0"
+                min="-180" max="180"
+                showTickLabels="true" showTickMarks="true"/>
+        <Label text="Light y-axis rotation slider"/>
+        <Slider fx:id="lightYAxisRotationSlider" prefWidth="3000.0"
+                min="-180" max="180"
+                showTickLabels="true" showTickMarks="true"/>
+        <Label text="Light pivot z slider"/>
+        <Slider fx:id="lightPivotZSlider" prefWidth="3000.0"
+                min="-600" max="600"
+                showTickLabels="true" showTickMarks="true"/>
+
+    </VBox>
+    <VBox>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+        <Label text="Light translate x"/>
+        <Slider fx:id="translateXSlider" prefWidth="3000.0"
+                min="-200" max="200"
+                showTickLabels="true" showTickMarks="true"/>
+        <Label text="Light translate y"/>
+        <Slider fx:id="translateYSlider" prefWidth="3000.0"
+                min="-200" max="200"
+                showTickLabels="true" showTickMarks="true"/>
+        <Label text="Light translate z"/>
+        <Slider fx:id="translateZSlider" prefWidth="3000.0"
+                min="-200" max="200"
+                showTickLabels="true" showTickMarks="true"/>
+    </VBox>
+</HBox>
+
+
