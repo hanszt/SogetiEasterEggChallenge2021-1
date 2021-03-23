@@ -47,6 +47,27 @@ In the app.properties file, you can tweak certain parameters of the program to s
 #### screenshot 4: 
 ![Egg](src/main/resources/images/example3.jpg)
 
+---
+
+#### There are some rules to keep in mind:
+- It is not the intention that the Easter egg block is made in a println (), and then printed out. That is why we only judge Easter eggs that are generated based on code algorithm.
+  For example, what is not allowed:
+
+```
+ public void drawEgg() {
+  println("   _   ");
+  println(" _(\")_ ");
+  println("(_ . _)");
+  println(" / : \\ ");
+  println("(_/ \\_)");
+  }
+  ```
+- The code is written in Java
+- The code can be found at GitHub and Fork the repo from https://github.com/SogetiEasterEgg/SogetiEasterEggChallenge2021
+- This fork is shared with eastereggcompetition.nl@sogeti.com before 29-03-2021
+
+--- 
+
 ## Motivation
 For the creation of my egg, I was inspired by [this](https://gitlab.com/hanszt/fibonaccisim3d) simulation which 
 on it's turn was inspired by [this](https://youtu.be/bqtqltqcQhw?t=345) Sebastian Lague coding adventure episode!
