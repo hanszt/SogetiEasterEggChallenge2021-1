@@ -55,6 +55,7 @@ public class TurnFraction {
             PHI, new TurnFraction(PHI, AppConstants.GOLDEN_RATIO),
             "square root of two", new TurnFraction("Square root of two", Math.sqrt(2)),
             "pi", new TurnFraction("Pi", Math.PI),
+            "1/pi", new TurnFraction("1/pi", 1 / Math.PI),
             "e", new TurnFraction("e", Math.E));
 
     private final String name;
@@ -115,6 +116,8 @@ public class TurnFraction {
     public static void configureComboBox(ComboBox<TurnFraction> turnFractionComboBox) {
         STRING_TURN_FRACTION_MAP.forEach((key, value) -> turnFractionComboBox.getItems().add(value));
         turnFractionComboBox.getItems().addAll(
+                new TurnFraction("113/355"),
+                new TurnFraction("7/22"),
                 new TurnFraction("1/12"),
                 new TurnFraction("1/10"),
                 new TurnFraction("1/6"),
