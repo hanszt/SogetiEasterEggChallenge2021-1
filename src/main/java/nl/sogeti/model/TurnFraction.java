@@ -14,7 +14,7 @@ public class TurnFraction {
     // an exponent is 'e' or 'E' followed by an optionally
     // signed decimal integer.
     static final String EXP = "[eE][+-]?" + DIGITS;
-    public static final String FP_REGEX =
+    private static final String DOUBLE_REGEX =
             "[\\x00-\\x20]*" +  // Optional leading "whitespace"
                     "[+-]?(" + // Optional sign character
                     "NaN|" +           // "NaN" string
@@ -72,10 +72,10 @@ public class TurnFraction {
         this.value = value;
     }
 
-    public static final String FRACTION_REGEX = "[0-9][0-9]*/[1-9][0-9]*";
+    private static final String FRACTION_REGEX = DOUBLE_REGEX + "/" + DOUBLE_REGEX;
 
     private double parseValue(String value) {
-        if (value.matches(FP_REGEX)) return Double.parseDouble(value);
+        if (value.matches(DOUBLE_REGEX)) return Double.parseDouble(value);
         else if (value.matches(FRACTION_REGEX)) return parseFraction(value);
         parsable = false;
         return 0;
@@ -137,8 +137,8 @@ public class TurnFraction {
 
     private static void highLightWhenNotParsable(TextField textField, String value) {
         boolean parsable = STRING_TURN_FRACTION_MAP.containsKey(value.toLowerCase()) ||
-                value.matches(TurnFraction.FP_REGEX) ||
-                value.matches(TurnFraction.FRACTION_REGEX);
+                value.matches(DOUBLE_REGEX) ||
+                value.matches(FRACTION_REGEX);
 
         if (parsable) textField.setStyle("-fx-text-fill: black;");
         else textField.setStyle("-fx-text-fill: red;");

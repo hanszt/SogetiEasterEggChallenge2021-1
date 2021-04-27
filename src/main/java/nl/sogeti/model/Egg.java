@@ -33,10 +33,10 @@ public class Egg implements Iterable<MiniEgg> {
     public Egg() {
         super();
         memberSize.addListener((o, c, n) -> controlMembersSize(n.intValue()));
-        miniEggs.getChildren().addListener(this::onSeedSizeChanged);
+        miniEggs.getChildren().addListener(this::onMiniEggAmountChanged);
     }
 
-    private void onSeedSizeChanged(ListChangeListener.Change<? extends Node> change) {
+    private void onMiniEggAmountChanged(ListChangeListener.Change<? extends Node> change) {
         int index = 0;
         for (Node node : change.getList()) {
             setHighlighting((MiniEgg) node, index);

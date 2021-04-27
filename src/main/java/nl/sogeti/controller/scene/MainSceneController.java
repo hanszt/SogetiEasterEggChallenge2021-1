@@ -173,6 +173,7 @@ public class MainSceneController extends SceneController {
     private void configureComboBoxes() {
         attributeCombobox.getItems().addAll(turnFractionAttribute, highLightingAttribute, distributionAttribute, memberCountAttribute, none);
         attributeCombobox.setValue(memberCountAttribute);
+        egg.animationAttributeProperty().bind(attributeCombobox.valueProperty());
 
         TurnFraction.configureComboBox(turnFractionComboBox);
         turnFractionComboBox.valueProperty().addListener(this::turnFractionComboboxValueChanged);
@@ -203,7 +204,6 @@ public class MainSceneController extends SceneController {
         egg.highlightingValueProperty().bind(highlightingSlider.valueProperty());
         egg.miniEggSizeProperty().bind(miniEggSizeSlider.valueProperty());
         egg.memberSizeProperty().bind(numberOfObjectsSlider.valueProperty());
-        egg.animationAttributeProperty().set(attributeCombobox.getValue());
         egg.getAnimationAttribute().updateIncrementSliderBounds(animationIncrementSlider, ANIMATION_FACTOR);
     }
 
@@ -295,7 +295,6 @@ public class MainSceneController extends SceneController {
 
     @FXML
     private void animatedAttributeComboboxAction() {
-        egg.animationAttributeProperty().setValue(attributeCombobox.getValue());
         attributeCombobox.getValue().updateIncrementSliderBounds(animationIncrementSlider, ANIMATION_FACTOR);
     }
 
